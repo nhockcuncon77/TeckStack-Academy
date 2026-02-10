@@ -116,9 +116,10 @@ export default function Programs() {
 
         <section className="section program-block">
           <h2 className="section-title">Pricing & Enrollment</h2>
-          <p>
-            Flexible payment plans available. Scholarships and partner-sponsored seats
-            offered.
+          <p className="pricing-free">
+            <strong>Free enrollment.</strong> Our internship program is free to join. We believe
+            in making industry-ready training accessible—no tuition, no fees. Apply now and
+            start building your tech career at no cost.
           </p>
           <Link to="/apply" className="btn btn-primary" style={{ marginTop: '1rem' }}>
             Apply Now
