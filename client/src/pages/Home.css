@@ -339,7 +339,7 @@
   display: block;
 }
 
-/* Crop bottom of DevOps image to hide text overlay in photo */
+/* Crop bottom of track images to hide any text overlay in photos */
 .career-track-image--crop-bottom img {
   object-position: top center;
 }

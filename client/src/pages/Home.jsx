@@ -185,7 +185,7 @@ export default function Home() {
           <div className="career-tracks-grid">
             {tracks.map(({ name, slug }) => (
               <Link key={slug} to={`/career-tracks/${slug}`} className="career-track-card">
-                <div className={`career-track-image ${slug === 'devops-engineer' ? 'career-track-image--crop-bottom' : ''}`}>
+                <div className="career-track-image career-track-image--crop-bottom">
                   {trackImages[slug] && (
                     <img src={trackImages[slug]} alt="" />
                   )}
