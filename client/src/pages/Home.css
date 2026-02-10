@@ -1,0 +1,566 @@
+/* Hero with blue overlay */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 100px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 50%, #1e3a8a 100%);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 58, 138, 0.85) 100%);
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 640px;
+  z-index: 1;
+}
+
+.hero-welcome {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: white;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-cta-btn {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Feature cards - white, rounded, shadow */
+.feature-cards {
+  margin-top: -48px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 40px;
+}
+
+.feature-cards-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card-icon {
+  font-size: 2rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Who We Are - two columns */
+.who-we-are {
+  background: var(--bg);
+}
+
+.who-we-are-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.who-we-are-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 6px solid rgba(29, 78, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.play-button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-left: 28px solid white;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  margin-left: 8px;
+}
+
+.who-we-are-content .section-title {
+  margin-bottom: 1rem;
+}
+
+.who-we-are-text {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Why section - list + 95% card */
+.why-section {
+  background: var(--bg-alt);
+}
+
+.why-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.why-list {
+  list-style: none;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.why-check {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-check::after {
+  content: '✓';
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.why-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 280px;
+}
+
+.success-rate-card {
+  background: var(--white);
+  padding: 32px 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.success-rate-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+}
+
+.success-rate-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.success-rate-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 8;
+}
+
+.success-rate-fill {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.success-rate-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.success-rate-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Career Tracks - dark section with pattern */
+.career-tracks-section {
+  position: relative;
+  background: var(--primary-darker);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.career-tracks-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.career-tracks-label {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.career-tracks-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.career-tracks-subtitle {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+}
+
+.career-tracks-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.career-track-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s, border-color 0.2s;
+  color: white;
+}
+
+.career-track-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.career-track-image {
+  height: 160px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(30, 64, 175, 0.4) 100%);
+}
+
+.career-track-card h3 {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Program Outcomes */
+.outcomes-section {
+  background: var(--bg);
+}
+
+.outcomes-inner {
+  text-align: center;
+}
+
+.outcomes-inner .section-title {
+  margin-bottom: 2.5rem;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.outcome-item {
+  text-align: center;
+}
+
+.outcome-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+}
+
+.outcome-star {
+  line-height: 1;
+}
+
+.outcome-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Testimonials - light grey, dotted pattern */
+.testimonials-section {
+  position: relative;
+  background: var(--bg-alt);
+  padding: 80px 0;
+}
+
+.testimonials-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.testimonials-label {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-section .section-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.testimonials-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.testimonial-quote-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  flex-shrink: 0;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.testimonial-role {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+/* CTA Banner */
+.cta-banner {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.cta-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 100%);
+}
+
+.cta-banner-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.cta-banner-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cta-banner-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner-sub {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.cta-banner-btn {
+  background: var(--accent) !important;
+  color: white !important;
+  padding: 14px 32px;
+  font-size: 1.05rem;
+}
+
+.cta-banner-btn:hover {
+  background: var(--accent-light) !important;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .feature-cards-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .who-we-are-inner,
+  .why-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .career-tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0 80px;
+  }
+
+  .feature-cards {
+    margin-top: -32px;
+  }
+
+  .career-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar-inner {
+    justify-content: center;
+  }
+
+  .top-bar-right {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+.track-icon-hero {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.overview-lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.roadmap-list {
+  list-style: none;
+}
+
+.roadmap-list li {
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.roadmap-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
