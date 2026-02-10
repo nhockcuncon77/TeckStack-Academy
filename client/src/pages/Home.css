@@ -339,6 +339,11 @@
   display: block;
 }
 
+/* Crop bottom of DevOps image to hide text overlay in photo */
+.career-track-image--crop-bottom img {
+  object-position: top center;
+}
+
 .career-track-card h3 {
   padding: 20px;
   font-size: 1.1rem;
