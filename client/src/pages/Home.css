@@ -20,9 +20,10 @@
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: var(--primary-darker);
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -214,16 +215,13 @@
   line-height: 1.7;
 }
 
-/* Why section - list + 95% card */
+/* Why section */
 .why-section {
   background: var(--bg-alt);
 }
 
 .why-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+  max-width: 640px;
 }
 
 .why-list {
@@ -255,65 +253,6 @@
   color: white;
   font-size: 0.75rem;
   font-weight: 700;
-}
-
-.why-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 280px;
-}
-
-.success-rate-card {
-  background: var(--white);
-  padding: 32px 40px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-}
-
-.success-rate-circle {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 12px;
-}
-
-.success-rate-svg {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-}
-
-.success-rate-bg {
-  fill: none;
-  stroke: var(--border);
-  stroke-width: 8;
-}
-
-.success-rate-fill {
-  fill: none;
-  stroke: var(--primary);
-  stroke-width: 8;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.6s ease;
-}
-
-.success-rate-value {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.success-rate-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
 }
 
 /* Career Tracks - dark section with pattern */

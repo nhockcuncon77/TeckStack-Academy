@@ -189,24 +189,6 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className="why-visual">
-            <div className="success-rate-card">
-              <div className="success-rate-circle">
-                <svg viewBox="0 0 100 100" className="success-rate-svg">
-                  <circle className="success-rate-bg" cx="50" cy="50" r="45" />
-                  <circle
-                    className="success-rate-fill"
-                    cx="50"
-                    cy="50"
-                    r="45"
-                    style={{ strokeDasharray: '283', strokeDashoffset: '14' }}
-                  />
-                </svg>
-                <span className="success-rate-value">95%</span>
-              </div>
-              <p className="success-rate-label">Success Rate</p>
-            </div>
-          </div>
         </div>
       </section>
 
