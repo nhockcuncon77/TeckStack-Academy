@@ -40,6 +40,15 @@ const tracks = [
   { name: 'AI & Automation Engineer', slug: 'ai-automation' },
 ]
 
+const trackImages = {
+  'cloud-engineer': '/cloud_engineer.jpg',
+  'devops-engineer': '/devops_engineer.jpg',
+  'full-stack-developer': '/fullstack_engineer.jpg',
+  'data-engineer': '/data_engineer_analyst.jpg',
+  'cybersecurity': '/cybersecurity_analyst.jpg',
+  'ai-automation': '/AI_automation_engineer.jpg',
+}
+
 const outcomes = [
   'Portfolio of real projects',
   'Verified skills with certification readiness',
@@ -177,8 +186,8 @@ export default function Home() {
             {tracks.map(({ name, slug }) => (
               <Link key={slug} to={`/career-tracks/${slug}`} className="career-track-card">
                 <div className="career-track-image">
-                  {slug === 'cloud-engineer' && (
-                    <img src="/cloud_engineer.jpg" alt="" />
+                  {trackImages[slug] && (
+                    <img src={trackImages[slug]} alt="" />
                   )}
                 </div>
                 <h3>{name}</h3>
