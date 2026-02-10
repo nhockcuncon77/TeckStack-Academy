@@ -172,7 +172,7 @@ export default function Apply() {
               id="phone"
               name="phone"
               type="tel"
-              placeholder="(555) 123-4567"
+              placeholder="321-451-0687"
               autoComplete="tel"
             />
           </div>

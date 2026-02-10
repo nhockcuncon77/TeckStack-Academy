@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const app = express()
 const PORT = process.env.PORT || 5000
-const RECIPIENT_EMAIL = 'intrastackllc@gmail.com'
+const RECIPIENT_EMAIL = 'career@tekstackacademy.com'
 const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY || ''
 
 const storage = multer.memoryStorage()

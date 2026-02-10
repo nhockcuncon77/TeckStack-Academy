@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
+const SLIDE_VERSION = 2
 const HERO_SLIDES = [
-  { image: '/slide1.jpg' },
-  { image: '/slide2.jpg' },
-  { image: '/slide3.jpg' },
-  { image: '/slide4.jpg' },
-  { image: '/slide5.jpg' },
+  { image: `/slide1.jpg?v=${SLIDE_VERSION}` },
+  { image: `/slide2.jpg?v=${SLIDE_VERSION}` },
+  { image: `/slide3.jpg?v=${SLIDE_VERSION}` },
+  { image: `/slide4.jpg?v=${SLIDE_VERSION}` },
+  { image: `/slide5.jpg?v=${SLIDE_VERSION}` },
 ]
 
 const featureCards = [

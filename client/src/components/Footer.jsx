@@ -4,7 +4,10 @@ import './Footer.css'
 const footerColumns = {
   'About Us': [
     'Tekstack Academy bridges the gap between education and real employment. Build real-world IT experience.',
-    '📍 Tekstack Academy',
+    '331 Bella Vida Blvd - Orlando, FL 32828',
+    'Phone: 321-451-0687',
+    'E-mail: info@tekstackacademy.com',
+    'Resumes: career@tekstackacademy.com',
   ],
   'Help Link': [
     { to: '/programs', label: 'Programs' },

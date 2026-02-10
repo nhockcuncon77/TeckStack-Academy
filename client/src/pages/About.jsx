@@ -66,6 +66,10 @@ export default function About() {
         <section className="section">
           <h2 className="section-title">Contact Us</h2>
           <p>Get in touch with our team.</p>
+          <p><strong>Address:</strong> 331 Bella Vida Blvd - Orlando, FL 32828</p>
+          <p><strong>Phone:</strong> 321-451-0687</p>
+          <p><strong>E-mail:</strong> <a href="mailto:info@tekstackacademy.com">info@tekstackacademy.com</a></p>
+          <p><strong>Send resume to:</strong> <a href="mailto:career@tekstackacademy.com">career@tekstackacademy.com</a></p>
           <Link to="/apply" className="btn btn-primary" style={{ marginTop: '1rem' }}>
             Get in Touch
           </Link>
