@@ -1,9 +1,9 @@
-/* Hero slider: background images + light orange overlay (25%) + white text */
+/* Hero slider: background images fill frame; overlay + text at bottom */
 .hero {
   position: relative;
   min-height: 520px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 80px 0 100px;
   overflow: hidden;
 }
@@ -20,10 +20,9 @@
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--primary-darker);
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -48,6 +47,7 @@
   position: relative;
   max-width: 640px;
   z-index: 2;
+  padding-bottom: 56px;
 }
 
 .hero-dots {
@@ -79,12 +79,6 @@
   background: white;
 }
 
-.hero-welcome {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.75rem;
-}
-
 .hero-title {
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
@@ -92,13 +86,6 @@
   letter-spacing: -0.02em;
   color: white;
   margin-bottom: 1.25rem;
-}
-
-.hero-subtitle {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.7;
-  margin-bottom: 2rem;
 }
 
 .hero-cta-btn {

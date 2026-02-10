@@ -104,7 +104,6 @@ export default function Home() {
         </div>
         <div className="hero-overlay hero-overlay--orange" />
         <div className="container hero-inner">
-          <p className="hero-welcome">Welcome to Tekstack Academy</p>
           <h1 className="hero-title">
             Build Real-World IT
             <br />
@@ -112,12 +111,6 @@ export default function Home() {
             <br />
             Ready. Get Hired.
           </h1>
-          <p className="hero-subtitle">
-            Tekstack Academy is a next-generation internship and mentoring platform
-            where experienced technology professionals train, coach, and guide students
-            through real enterprise-level projects using modern cloud and automation
-            technologies.
-          </p>
           <Link to="/apply" className="btn btn-primary hero-cta-btn">
             Apply Now
           </Link>
