@@ -23,46 +23,9 @@ const footerColumns = {
   ],
 }
 
-const socialIcons = [
-  { name: 'Facebook', href: '#', icon: 'f' },
-  { name: 'Twitter', href: '#', icon: '𝕏' },
-  { name: 'Instagram', href: '#', icon: '📷' },
-  { name: 'LinkedIn', href: '#', icon: 'in' },
-]
-
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-cta-strip">
-        <div className="container footer-cta-inner">
-          <p className="footer-cta-tagline">Ready to build your tech career?</p>
-          <h2 className="footer-cta-title">Apply to Tekstack Academy today</h2>
-          <p className="footer-cta-sub">Employers: Hire trained, job-ready talent</p>
-          <Link to="/apply" className="btn btn-primary footer-cta-btn">
-            Apply Now →
-          </Link>
-        </div>
-      </div>
-
-      <div className="footer-brand-strip">
-        <div className="container footer-brand-inner">
-          <Link to="/" className="footer-logo">
-            <img src="/logo.jpg" alt="Tekstack Academy" className="footer-logo-img" />
-          </Link>
-          <p className="footer-desc">
-            Build real-world IT experience. Get industry-ready. Get hired. A
-            next-generation internship and mentoring platform.
-          </p>
-          <div className="footer-social">
-            {socialIcons.map((s) => (
-              <a key={s.name} href={s.href} className="footer-social-btn" aria-label={s.name}>
-                {s.icon}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div className="footer-links-strip">
         <div className="container footer-links-inner">
           {Object.entries(footerColumns).map(([title, content]) => (

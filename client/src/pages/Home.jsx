@@ -1,5 +1,14 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
+
+const HERO_SLIDES = [
+  { image: '/slide1.jpg' },
+  { image: '/slide2.jpg' },
+  { image: '/slide3.jpg' },
+  { image: '/slide4.jpg' },
+  { image: '/slide5.jpg' },
+]
 
 const featureCards = [
   {
@@ -71,12 +80,29 @@ const testimonials = [
 ]
 
 export default function Home() {
+  const [heroIndex, setHeroIndex] = useState(0)
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % HERO_SLIDES.length)
+    }, 5000)
+    return () => clearInterval(t)
+  }, [])
+
   return (
     <div className="home">
-      {/* Hero with blue overlay */}
-      <section className="hero">
-        <div className="hero-bg" />
-        <div className="hero-overlay" />
+      {/* Hero slider: background images + light orange overlay + white text */}
+      <section className="hero hero-slider">
+        <div className="hero-slides">
+          {HERO_SLIDES.map((slide, i) => (
+            <div
+              key={slide.image}
+              className={`hero-slide ${i === heroIndex ? 'hero-slide--active' : ''}`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            />
+          ))}
+        </div>
+        <div className="hero-overlay hero-overlay--orange" />
         <div className="container hero-inner">
           <p className="hero-welcome">Welcome to Tekstack Academy</p>
           <h1 className="hero-title">
@@ -95,6 +121,17 @@ export default function Home() {
           <Link to="/apply" className="btn btn-primary hero-cta-btn">
             Apply Now
           </Link>
+        </div>
+        <div className="hero-dots">
+          {HERO_SLIDES.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`hero-dot ${i === heroIndex ? 'hero-dot--active' : ''}`}
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => setHeroIndex(i)}
+            />
+          ))}
         </div>
       </section>
 

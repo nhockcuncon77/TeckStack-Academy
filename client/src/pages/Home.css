@@ -1,4 +1,4 @@
-/* Hero with blue overlay */
+/* Hero slider: background images + light orange overlay (25%) + white text */
 .hero {
   position: relative;
   min-height: 520px;
@@ -8,23 +8,74 @@
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-slider {
+  min-height: 520px;
+}
+
+.hero-slides {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 50%, #1e3a8a 100%);
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hero-slide--active {
+  opacity: 1;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 58, 138, 0.85) 100%);
+  z-index: 1;
+}
+
+/* Light orange overlay at 25% opacity on top of slide image */
+.hero-overlay--orange {
+  background: rgba(251, 146, 60, 0.25);
 }
 
 .hero-inner {
   position: relative;
   max-width: 640px;
-  z-index: 1;
+  z-index: 2;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-dot--active {
+  background: white;
 }
 
 .hero-welcome {
