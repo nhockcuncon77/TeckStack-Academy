@@ -64,9 +64,9 @@
 }
 
 .footer-logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
-  max-width: 220px;
+  max-width: 280px;
   object-fit: contain;
   display: block;
 }
@@ -82,19 +82,19 @@
 .footer-social {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .footer-social-btn {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   font-weight: 600;
   transition: background 0.2s;
 }

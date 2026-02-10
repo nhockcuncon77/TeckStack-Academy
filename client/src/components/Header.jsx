@@ -4,13 +4,13 @@ import './Header.css'
 
 const navItems = [
   { to: '/', label: 'Home' },
+  { to: '/about', label: 'About Us' },
   { to: '/programs', label: 'Programs' },
   { to: '/career-tracks', label: 'Career Tracks' },
   { to: '/e-learning', label: 'E-Learning' },
   { to: '/projects', label: 'Projects' },
   { to: '/careers', label: 'Careers' },
   { to: '/community', label: 'Community' },
-  { to: '/about', label: 'About' },
 ]
 
 const socialIcons = [

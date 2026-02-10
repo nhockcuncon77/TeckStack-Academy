@@ -10,7 +10,7 @@ const footerColumns = {
     { to: '/programs', label: 'Programs' },
     { to: '/career-tracks', label: 'Career Tracks' },
     { to: '/e-learning', label: 'E-Learning' },
-    { to: '/about', label: 'About' },
+    { to: '/about', label: 'About Us' },
   ],
   'Quick Link': [
     { to: '/apply', label: 'Apply' },
