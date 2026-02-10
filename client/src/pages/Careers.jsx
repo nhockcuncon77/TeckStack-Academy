@@ -19,7 +19,7 @@ const categories = [
   },
   {
     title: 'Employer Directory',
-    description: 'Verified companies hiring Techstack Academy talent.',
+    description: 'Verified companies hiring Tekstack Academy talent.',
   },
 ]
 

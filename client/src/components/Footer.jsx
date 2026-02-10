@@ -3,8 +3,8 @@ import './Footer.css'
 
 const footerColumns = {
   'About Us': [
-    'Techstack Academy bridges the gap between education and real employment. Build real-world IT experience.',
-    '📍 Techstack Academy',
+    'Tekstack Academy bridges the gap between education and real employment. Build real-world IT experience.',
+    '📍 Tekstack Academy',
   ],
   'Help Link': [
     { to: '/programs', label: 'Programs' },
@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="footer-cta-strip">
         <div className="container footer-cta-inner">
           <p className="footer-cta-tagline">Ready to build your tech career?</p>
-          <h2 className="footer-cta-title">Apply to Techstack Academy today</h2>
+          <h2 className="footer-cta-title">Apply to Tekstack Academy today</h2>
           <p className="footer-cta-sub">Employers: Hire trained, job-ready talent</p>
           <Link to="/apply" className="btn btn-primary footer-cta-btn">
             Apply Now →
@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="footer-brand-strip">
         <div className="container footer-brand-inner">
           <Link to="/" className="footer-logo">
-            <img src="/logo.jpg" alt="Techstack Academy" className="footer-logo-img" />
+            <img src="/logo.jpg" alt="Tekstack Academy" className="footer-logo-img" />
           </Link>
           <p className="footer-desc">
             Build real-world IT experience. Get industry-ready. Get hired. A
@@ -90,7 +90,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>© {new Date().getFullYear()} Techstack Academy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Tekstack Academy. All rights reserved.</p>
         </div>
       </div>
     </footer>

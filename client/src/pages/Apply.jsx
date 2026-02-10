@@ -212,7 +212,7 @@ export default function Apply() {
               name="statement"
               rows={5}
               required
-              placeholder="Share your goals and why you're interested in Techstack Academy..."
+              placeholder="Share your goals and why you're interested in Tekstack Academy..."
             />
           </div>
 

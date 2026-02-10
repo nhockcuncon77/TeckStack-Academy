@@ -31,7 +31,7 @@ export default function About() {
               <h3 className="profile-name">Stefan Nguyen</h3>
               <p className="profile-title">Program Director</p>
               <p className="profile-bio">
-                Leading Techstack Academy&apos;s program design and mentor network to deliver
+                Leading Tekstack Academy&apos;s program design and mentor network to deliver
                 industry-ready training and real-world project experience.
               </p>
             </div>

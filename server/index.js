@@ -60,7 +60,7 @@ function createMailer() {
 }
 
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Techstack Academy API' })
+  res.json({ status: 'ok', message: 'Tekstack Academy API' })
 })
 
 app.post('/api/apply', upload.single('resume'), async (req, res) => {
@@ -83,7 +83,7 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
 
     const mailer = createMailer()
     const html = `
-      <h2>New Application – Techstack Academy</h2>
+      <h2>New Application – Tekstack Academy</h2>
       <p><strong>First name:</strong> ${escapeHtml(firstName)}</p>
       <p><strong>Last name:</strong> ${escapeHtml(lastName)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
@@ -107,7 +107,7 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
       await mailer.sendMail({
         from: process.env.SMTP_USER || process.env.NODEMAILER_USER,
         to: RECIPIENT_EMAIL,
-        subject: `Techstack Academy Application – ${firstName} ${lastName}`,
+        subject: `Tekstack Academy Application – ${firstName} ${lastName}`,
         html,
         attachments,
       })

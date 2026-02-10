@@ -28,7 +28,7 @@ export default function Header() {
       <div className="top-bar">
         <div className="container top-bar-inner">
           <div className="top-bar-left">
-            <span className="top-bar-item">📍 Techstack Academy</span>
+            <span className="top-bar-item">📍 Tekstack Academy</span>
             <span className="top-bar-item">📞 +1 (555) 123-4567</span>
             <span className="top-bar-item">✉️ hello@techstackacademy.com</span>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
       <div className="main-nav">
         <div className="header-inner container">
           <Link to="/" className="logo">
-            <img src="/logo.jpg" alt="Techstack Academy" className="logo-img" />
+            <img src="/logo.jpg" alt="Tekstack Academy" className="logo-img" />
           </Link>
           <button
             className="menu-toggle"

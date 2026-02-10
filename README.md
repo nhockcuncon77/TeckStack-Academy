@@ -1,6 +1,6 @@
-# Techstack Academy
+# Tekstack Academy
 
-A React + Node.js website for **Techstack Academy** — a next-generation internship and mentoring platform for real-world IT experience.
+A React + Node.js website for **Tekstack Academy** — a next-generation internship and mentoring platform for real-world IT experience.
 
 ## Stack
 

@@ -55,7 +55,7 @@ const testimonials = [
   },
   {
     quote:
-      'Techstack Academy helped me transition into DevOps with hands-on AWS and CI/CD projects.',
+      'Tekstack Academy helped me transition into DevOps with hands-on AWS and CI/CD projects.',
     name: 'Jordan Taylor',
     role: 'DevOps Track Graduate',
   },
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="hero-bg" />
         <div className="hero-overlay" />
         <div className="container hero-inner">
-          <p className="hero-welcome">Welcome to Techstack Academy</p>
+          <p className="hero-welcome">Welcome to Tekstack Academy</p>
           <h1 className="hero-title">
             Build Real-World IT
             <br />
@@ -78,7 +78,7 @@ export default function Home() {
             Ready. Get Hired.
           </h1>
           <p className="hero-subtitle">
-            Techstack Academy is a next-generation internship and mentoring platform
+            Tekstack Academy is a next-generation internship and mentoring platform
             where experienced technology professionals train, coach, and guide students
             through real enterprise-level projects using modern cloud and automation
             technologies.
@@ -116,7 +116,7 @@ export default function Home() {
             <p className="section-label">Who We Are</p>
             <h2 className="section-title">Where Learning Meets the Real World</h2>
             <p className="who-we-are-text">
-              Techstack Academy bridges the gap between education and real employment.
+              Tekstack Academy bridges the gap between education and real employment.
               We provide structured internships, mentorship, hands-on projects, and
               career coaching to prepare students for high-paying IT roles.
             </p>
@@ -129,12 +129,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Techstack Academy */}
+      {/* Why Tekstack Academy */}
       <section className="why-section section">
         <div className="container why-inner">
           <div className="why-content">
-            <p className="section-label">Why Techstack Academy</p>
-            <h2 className="section-title">The Techstack Advantage</h2>
+            <p className="section-label">Why Tekstack Academy</p>
+            <h2 className="section-title">The Tekstack Advantage</h2>
             <ul className="why-list">
               {whyItems.map((item, i) => (
                 <li key={i}>
@@ -231,7 +231,7 @@ export default function Home() {
         <div className="cta-banner-overlay" />
         <div className="container cta-banner-inner">
           <p className="cta-banner-tagline">Ready to build your tech career?</p>
-          <h2 className="cta-banner-title">Apply to Techstack Academy today</h2>
+          <h2 className="cta-banner-title">Apply to Tekstack Academy today</h2>
           <p className="cta-banner-sub">Employers: Hire trained, job-ready talent</p>
           <Link to="/apply" className="btn btn-primary cta-banner-btn">
             Apply Now →
