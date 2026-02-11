@@ -9,6 +9,9 @@ node_modules/
 # Build
 client/dist/
 
+# Server data (users, settings, content - local/secret)
+server/data/files/
+
 # Logs and debug
 npm-debug.log*
 *.log

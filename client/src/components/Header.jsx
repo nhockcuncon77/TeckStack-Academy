@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import './Header.css'
 
 const projectsDropdown = [
@@ -52,6 +53,7 @@ const socialIcons = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [projectsOpen, setProjectsOpen] = useState(false)
+  const { user, isAdmin, logout } = useAuth()
 
   return (
     <header className="header">
@@ -130,6 +132,22 @@ export default function Header() {
               )
             )}
             <div className="nav-cta">
+              {user ? (
+                <>
+                  {isAdmin && (
+                    <Link to="/admin" className="nav-link" onClick={() => setMenuOpen(false)}>
+                      Admin
+                    </Link>
+                  )}
+                  <button type="button" className="nav-link link-button" onClick={() => { logout(); setMenuOpen(false) }}>
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <Link to="/login" className="nav-link" onClick={() => setMenuOpen(false)}>
+                  Login
+                </Link>
+              )}
               <Link to="/apply" className="btn btn-primary">
                 Apply Now
               </Link>

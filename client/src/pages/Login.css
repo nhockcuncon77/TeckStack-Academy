@@ -8,6 +8,32 @@
   margin-bottom: 80px;
 }
 
+.login-error {
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: #f85149;
+  font-size: 0.9rem;
+}
+
+.login-toggle {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  font: inherit;
+}
+
 .login-form .form-group {
   margin-bottom: 1.25rem;
 }

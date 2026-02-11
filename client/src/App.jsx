@@ -1,5 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
+import { ProtectedRoute } from './components/ProtectedRoute'
+import AdminLayout from './pages/admin/AdminLayout'
+import AdminDashboard from './pages/admin/AdminDashboard'
+import AdminSettings from './pages/admin/AdminSettings'
+import AdminCareerTracks from './pages/admin/AdminCareerTracks'
+import AdminELearning from './pages/admin/AdminELearning'
 import Home from './pages/Home'
 import Programs from './pages/Programs'
 import CareerTracks from './pages/CareerTracks'
@@ -29,6 +35,20 @@ export default function App() {
           <Route path="apply" element={<Apply />} />
           <Route path="login" element={<Login />} />
         </Route>
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute adminOnly>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<AdminDashboard />} />
+          <Route path="settings" element={<AdminSettings />} />
+          <Route path="career-tracks" element={<AdminCareerTracks />} />
+          <Route path="e-learning" element={<AdminELearning />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )

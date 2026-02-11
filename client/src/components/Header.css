@@ -139,6 +139,15 @@
   flex-shrink: 0;
 }
 
+.nav-cta .link-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  margin-right: 8px;
+}
+
 .nav-cta .btn {
   white-space: nowrap;
 }

@@ -59,9 +59,21 @@ A React + Node.js website for **Tekstack Academy** — a next-generation interns
 | `/apply`         | Application form               |
 | `/login`         | Login (Student / Mentor / Employer / Admin) |
 
+## Auth & Admin Portal
+
+- **Register** at `/login` (switch to “Register”) — first user becomes **admin**.
+- **Login** at `/login` — then open **Admin** (sidebar or `/admin`) to manage the site.
+- **Admin** (role `admin` only): Dashboard, Settings (site name, contact email), Career Tracks, E-Learning features. Data is stored in `server/data/files/` (JSON).
+- Set `JWT_SECRET` in `server/.env` for production (see `server/.env.example`).
+
 ## API
 
 - `GET /api/health` — Health check
+- `POST /api/auth/register` — Register (email, password, name); first user is admin
+- `POST /api/auth/login` — Login (email, password); returns `{ user, token }`
+- `GET /api/auth/me` — Current user (header: `Authorization: Bearer <token>`)
+- `GET /api/settings`, `GET /api/career-tracks`, `GET /api/elearning-features` — Public content
+- `GET/PUT /api/admin/settings`, `GET/PUT /api/admin/career-tracks`, `GET/PUT /api/admin/elearning-features` — Admin only (Bearer token). Stored in `server/data/files/*.json`. The main site pages (Career Tracks, E-Learning) still use static client data; you can later switch them to fetch from `GET /api/career-tracks` and `GET /api/elearning-features`.
 - `POST /api/apply` — Submit application (multipart/form-data):
   - **firstName**, **lastName**, **email**, **phone**, **collegeName**, **careerTrack**, **statement**
   - **resume** (optional file: PDF or Word, max 5 MB)
