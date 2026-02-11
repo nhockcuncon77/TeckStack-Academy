@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../../context/AuthContext'
+import { apiBase } from '../../api'
 
 export default function AdminELearning() {
   const { authHeader } = useAuth()
@@ -9,7 +10,7 @@ export default function AdminELearning() {
   const [message, setMessage] = useState(null)
 
   useEffect(() => {
-    fetch('/api/admin/elearning-features', { headers: authHeader })
+    fetch(`${apiBase}/api/admin/elearning-features`, { headers: authHeader })
       .then((res) => res.json())
       .then(setFeatures)
       .catch(() => setMessage({ type: 'error', text: 'Failed to load e-learning features' }))
@@ -35,7 +36,7 @@ export default function AdminELearning() {
   function save() {
     setSaving(true)
     setMessage(null)
-    fetch('/api/admin/elearning-features', {
+    fetch(`${apiBase}/api/admin/elearning-features`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', ...authHeader },
       body: JSON.stringify(features),

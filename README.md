@@ -31,7 +31,7 @@ A React + Node.js website for **Tekstack Academy** — a next-generation interns
    ```
 
    - Frontend: [http://localhost:3000](http://localhost:3000)
-   - Backend API: [http://localhost:5000](http://localhost:5000)
+   - Backend API: [http://localhost:5002](http://localhost:5002) (see `server/index.js` / `client/vite.config.js`)
 
 3. **Run separately:**
 
@@ -86,6 +86,15 @@ A React + Node.js website for **Tekstack Academy** — a next-generation interns
 - Submissions are sent to **intrastackllc@gmail.com** when the server has SMTP configured.
 - **Email (Gmail):** Copy `server/.env.example` to `server/.env` and set `SMTP_USER` and `SMTP_PASS` (use a [Gmail App Password](https://support.google.com/accounts/answer/185833)).
 - **reCAPTCHA (anti-spam):** Get keys from [Google reCAPTCHA](https://www.google.com/recaptcha/admin). Set `RECAPTCHA_SECRET_KEY` in `server/.env` and `VITE_RECAPTCHA_SITE_KEY` in `client/.env` (copy from `client/.env.example`). Use reCAPTCHA v2 “I’m not a robot” checkbox. If keys are not set, the form still works without the checkbox (useful for local testing).
+
+## Deploy to Vercel (production)
+
+- **Frontend:** Deployed at [teck-stack-academy.vercel.app](https://teck-stack-academy.vercel.app/). Vercel builds from this repo (`buildCommand`: `npm run build`, `outputDirectory`: `client/dist`). Deploy as usual; the site will be served from your Vercel URL.
+- **Backend:** Vercel does not run the Node/Express server. Deploy the API to a Node host (e.g. [Railway](https://railway.app), [Render](https://render.com), [Fly.io](https://fly.io)): use the `server/` folder, set `PORT` and `JWT_SECRET` (and optional SMTP/reCAPTCHA) in the host’s environment.
+- **Connect frontend to API:** In the Vercel project, add an **Environment Variable**:
+  - **Name:** `VITE_API_URL`
+  - **Value:** your API base URL (e.g. `https://your-app.railway.app`) — no trailing slash.
+- Redeploy the frontend so the build picks up `VITE_API_URL`. Login, admin, and the Apply form will then call your deployed API.
 
 ## Notes
 

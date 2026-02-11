@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { careerTracks } from '../data/careerTracks'
+import { apiBase } from '../api'
 import './Apply.css'
 
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
@@ -84,7 +85,7 @@ export default function Apply() {
     if (resume) formData.append('resume', resume)
 
     try {
-      const res = await fetch('/api/apply', {
+      const res = await fetch(`${apiBase}/api/apply`, {
         method: 'POST',
         body: formData,
       })

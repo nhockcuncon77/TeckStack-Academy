@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../../context/AuthContext'
+import { apiBase } from '../../api'
 
 export default function AdminCareerTracks() {
   const { authHeader } = useAuth()
@@ -9,7 +10,7 @@ export default function AdminCareerTracks() {
   const [message, setMessage] = useState(null)
 
   useEffect(() => {
-    fetch('/api/admin/career-tracks', { headers: authHeader })
+    fetch(`${apiBase}/api/admin/career-tracks`, { headers: authHeader })
       .then((res) => res.json())
       .then(setTracks)
       .catch(() => setMessage({ type: 'error', text: 'Failed to load career tracks' }))
@@ -49,7 +50,7 @@ export default function AdminCareerTracks() {
   function save() {
     setSaving(true)
     setMessage(null)
-    fetch('/api/admin/career-tracks', {
+    fetch(`${apiBase}/api/admin/career-tracks`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', ...authHeader },
       body: JSON.stringify(tracks),

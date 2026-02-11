@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import { apiBase } from '../api'
 
 const AuthContext = createContext(null)
 
@@ -25,7 +26,7 @@ export function AuthProvider({ children }) {
       setLoading(false)
       return
     }
-    fetch('/api/auth/me', {
+    fetch(`${apiBase}/api/auth/me`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(async (res) => {
@@ -54,7 +55,7 @@ export function AuthProvider({ children }) {
       try {
         data = text ? JSON.parse(text) : {}
       } catch {
-        throw new Error(res.ok ? 'Invalid response from server' : 'Server error. Is the API running on port 5000?')
+        throw new Error(res.ok ? 'Invalid response from server' : 'Server error. Is the API server running?')
       }
       if (!res.ok) throw new Error(data.error || 'Login failed')
       setToken(data.token)
@@ -66,7 +67,7 @@ export function AuthProvider({ children }) {
 
   const register = useCallback(
     async (email, password, name) => {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch(`${apiBase}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, name }),
@@ -76,7 +77,7 @@ export function AuthProvider({ children }) {
       try {
         data = text ? JSON.parse(text) : {}
       } catch {
-        throw new Error(res.ok ? 'Invalid response from server' : 'Server error. Is the API running?')
+        throw new Error(res.ok ? 'Invalid response from server' : 'Server error. Is the API server running?')
       }
       if (!res.ok) throw new Error(data.error || 'Registration failed')
       setToken(data.token)

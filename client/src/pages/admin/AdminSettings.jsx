@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../../context/AuthContext'
+import { apiBase } from '../../api'
 
 export default function AdminSettings() {
   const { authHeader } = useAuth()
@@ -10,7 +11,7 @@ export default function AdminSettings() {
   const [message, setMessage] = useState(null)
 
   useEffect(() => {
-    fetch('/api/admin/settings', { headers: authHeader })
+    fetch(`${apiBase}/api/admin/settings`, { headers: authHeader })
       .then((res) => res.json())
       .then((data) => {
         setSiteName(data.siteName || '')
@@ -23,7 +24,7 @@ export default function AdminSettings() {
   function save() {
     setSaving(true)
     setMessage(null)
-    fetch('/api/admin/settings', {
+    fetch(`${apiBase}/api/admin/settings`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', ...authHeader },
       body: JSON.stringify({ siteName, contactEmail }),
